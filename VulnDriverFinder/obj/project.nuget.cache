@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "WmXVQR+1krDZ00x/0cpDRgtRoorYSEAYGvhjUJI3jO0o7jMZpXbQ5hAEjyPInMPyQ1+UmviTjT1AZvQYnK1Hfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dcetin\\.nuget\\packages\\htmlagilitypack\\1.11.46\\htmlagilitypack.1.11.46.nupkg.sha512",
+    "C:\\Users\\dcetin\\.nuget\\packages\\msftcompressioncab\\1.0.0\\msftcompressioncab.1.0.0.nupkg.sha512",
+    "C:\\Users\\dcetin\\.nuget\\packages\\penet\\4.0.1\\penet.4.0.1.nupkg.sha512",
+    "C:\\Users\\dcetin\\.nuget\\packages\\penet.asn1\\2.0.1\\penet.asn1.2.0.1.nupkg.sha512",
+    "C:\\Users\\dcetin\\.nuget\\packages\\system.formats.asn1\\7.0.0\\system.formats.asn1.7.0.0.nupkg.sha512",
+    "C:\\Users\\dcetin\\.nuget\\packages\\system.security.cryptography.pkcs\\7.0.3\\system.security.cryptography.pkcs.7.0.3.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Das Paket \"MSFTCompressionCab 1.0.0\" wurde nicht mit dem Projektzielframework \"net7.0\", sondern mit \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\" wiederhergestellt. Dieses Paket ist mit Ihrem Projekt möglicherweise nicht vollständig kompatibel.",
+      "libraryId": "MSFTCompressionCab",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
+}

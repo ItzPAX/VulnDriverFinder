@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+    <PackageReference Include="MSFTCompressionCab" Version="1.0.0" />
+    <PackageReference Include="PeNet" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Poushec.UpdateCatalogParser">
+      <HintPath>Poushec.UpdateCatalogParser.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
