@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj": {}
+    "D:\\MyProgramming\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj": {
+    "D:\\MyProgramming\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj",
+        "projectUniqueName": "D:\\MyProgramming\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj",
         "projectName": "VulnDriverFinder",
-        "projectPath": "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj",
-        "packagesPath": "C:\\Users\\dcetin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dcetin\\Desktop\\VulnDriverFinder\\VulnDriverFinder\\obj\\",
+        "projectPath": "D:\\MyProgramming\\VulnDriverFinder\\VulnDriverFinder\\VulnDriverFinder.csproj",
+        "packagesPath": "C:\\Users\\Deniz\\.nuget\\packages\\",
+        "outputPath": "D:\\MyProgramming\\VulnDriverFinder\\VulnDriverFinder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dcetin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

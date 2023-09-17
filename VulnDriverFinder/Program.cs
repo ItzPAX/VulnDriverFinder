@@ -32,7 +32,6 @@ string[] sus_imports =
 {
     "ZwMapViewOfSection",
     "MmMapIoSpace",
-    "MmGetPhysicalAddress",
     "IoCreateDevice",
     "IofCompleteRequest"
 };
@@ -67,11 +66,10 @@ void ProcessFile(string path)
     if (!pot_vuln)
         return;
 
-    // minimum we need is 3 imports {create, complete, mapview}
-    if (sus_imported.Count < 4)
+    if (!sus_imported.Contains("IoCreateDevice") && !sus_imported.Contains("IofCompleteRequest"))
         return;
 
-    if (!sus_imported.Contains("IoCreateDevice") && !sus_imported.Contains("IofCompleteRequest"))
+    if (!(sus_imported.Contains("MmMapIoSpace") || sus_imported.Contains("ZwMapViewOfSection")))
         return;
 
     var file = File.ReadAllBytes(path);
@@ -79,9 +77,6 @@ void ProcessFile(string path)
         return;
 
     Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\check_me");
-
-    if (sus_imported.Contains("MmMapIoSpace") && (!sus_imported.Contains("ZwMapViewOfSection") || !sus_imported.Contains("MmGetPhysicalAddress")))
-        return;
 
     WriteColor($"Found potentially vulnerable driver: [{filename}]", ConsoleColor.Green);
     foreach(var sus_imp in sus_imported)
