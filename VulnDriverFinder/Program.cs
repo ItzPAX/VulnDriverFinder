@@ -116,28 +116,27 @@ Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\downloads\\" + qu
 Console.WriteLine($"Scanning through {results.Count} items");
     int i = 1;
 
-foreach (var item in results)
+Parallel.ForEach(results, (item, state, index) =>
 {
-    Console.WriteLine($"[{i}/{results.Count}] Processing {item.Title} ({item.Size})");
+    Console.WriteLine($"[{index}/{results.Count}] Processing {item.Title} ({item.Size})");
+
     if (item.Classification.Contains("Driver"))
     {
         var path = Directory.GetCurrentDirectory() + "\\downloads\\" + query + "\\" + item.UpdateID;
         if (Directory.Exists(path) || item.SizeInBytes > 20971524)
         {
-            i++;
-            continue;
+            return;
         }
         UpdateBase update_details;
 
         try
         {
-            update_details = await catalogClient.GetUpdateDetailsAsync(item);
+            update_details = catalogClient.GetUpdateDetailsAsync(item).Result;
         }
         catch
         {
             Console.WriteLine("Fucked up");
-            i++;
-            continue;
+            return;
         }
 
         using (var dl_client = new WebClient())
@@ -150,7 +149,6 @@ foreach (var item in results)
             File.Delete(path + ".cab");
             ProcessDirectory(path);
 
-            //cleanup so we dont have 100000TB of crap
             DirectoryInfo di = new DirectoryInfo(path);
             try
             {
@@ -166,8 +164,7 @@ foreach (var item in results)
             catch { }
         }
     }
-    i++;
-}
+});
 
 Console.WriteLine("done.");
 Console.ReadKey();
